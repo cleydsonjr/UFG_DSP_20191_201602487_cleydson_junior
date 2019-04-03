@@ -4,6 +4,9 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.URL;
 
+/**
+ * Classe para ler o arquivo xml e imprimir na tela os seus dados
+ */
 public class XMLContentPrinter {
 
     public static void main(String[] args) {

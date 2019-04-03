@@ -8,6 +8,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Classe para ler o arquivo xml e gerar outro arquivo contendo somente os seus dados
+ */
 public class XMLDataExtractor {
 
     public static void main(String[] args) {
