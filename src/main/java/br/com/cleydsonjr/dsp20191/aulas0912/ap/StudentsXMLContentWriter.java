@@ -18,19 +18,15 @@ class StudentsXMLContentWriter {
         this.writer = writer;
     }
 
-    void writeStudentsData(final URL inputXmlUrl) {
-        try {
-            final Document document = readDocument(inputXmlUrl);
+    void writeStudentsData(final URL inputXmlUrl) throws DocumentException, IOException {
+        final Document document = readDocument(inputXmlUrl);
 
-            final Element root = document.getRootElement();
-            for (Iterator i = root.elementIterator(); i.hasNext(); ) {
-                Element studentElement = (Element) i.next();
-                printStudent(studentElement);
+        final Element root = document.getRootElement();
+        for (Iterator i = root.elementIterator(); i.hasNext(); ) {
+            Element studentElement = (Element) i.next();
+            printStudent(studentElement);
 
-                writer.write("");
-            }
-        } catch (DocumentException | IOException e) {
-            e.printStackTrace();
+            writer.write("");
         }
     }
 

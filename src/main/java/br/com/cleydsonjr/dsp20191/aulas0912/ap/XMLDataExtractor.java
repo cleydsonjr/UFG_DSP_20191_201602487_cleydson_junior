@@ -1,5 +1,7 @@
 package br.com.cleydsonjr.dsp20191.aulas0912.ap;
 
+import org.dom4j.DocumentException;
+
 import java.io.IOException;
 import java.io.Writer;
 import java.net.URL;
@@ -22,7 +24,7 @@ public class XMLDataExtractor {
             Writer writer = Files.newBufferedWriter(outputFile, Charset.forName("UTF-8"));
             StudentsXMLContentWriter xmlContentWriter = new StudentsXMLContentWriter(writer);
             xmlContentWriter.writeStudentsData(xmlUrl);
-        } catch (IOException e) {
+        } catch (IOException | DocumentException e) {
             e.printStackTrace();
         }
     }

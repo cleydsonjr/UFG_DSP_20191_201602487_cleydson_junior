@@ -46,6 +46,8 @@ public class XMLContentModifier {
             Files.createDirectories(outputFile.getParent());
             Writer writer = Files.newBufferedWriter(outputFile, Charset.forName("UTF-8"));
             document.write(writer);
+            writer.flush();
+            writer.close();
         } catch (DocumentException | IOException e) {
             e.printStackTrace();
         }
