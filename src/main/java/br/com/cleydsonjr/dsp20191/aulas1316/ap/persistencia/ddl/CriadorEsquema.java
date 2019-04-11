@@ -10,6 +10,7 @@ public class CriadorEsquema {
             new TableLotacaoCreate().criaTabela();
             new AdicionaFKLotacaoCargo().alteraTabela();
             new AdicionaFKLotacaoDepartamento().alteraTabela();
+            new AdicionaFKLotacaoFuncionario().alteraTabela();
         } catch (Exception e) {
             e.printStackTrace();
         }
