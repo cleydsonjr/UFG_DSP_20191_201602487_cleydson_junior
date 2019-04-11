@@ -20,7 +20,7 @@ import java.util.Iterator;
 public class XMLContentModifier {
 
     public static void main(String[] args) {
-        final URL xmlUrl = XMLContentModifier.class.getResource("/students.xml");
+        final URL xmlUrl = XMLContentModifier.class.getResource("/aulas0912/students.xml");
         final Path outputFile = Paths.get("out/output.xml");
         try {
             final Document document = readDocument(xmlUrl);

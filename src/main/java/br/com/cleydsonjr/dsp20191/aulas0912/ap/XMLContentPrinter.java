@@ -14,7 +14,7 @@ public class XMLContentPrinter {
 
     public static void main(String[] args) {
         try {
-            final URL xmlUrl = StudentsXMLContentWriter.class.getResource("/students.xml");
+            final URL xmlUrl = StudentsXMLContentWriter.class.getResource("/aulas0912/students.xml");
             Writer writer = new OutputStreamWriter(System.out);
             StudentsXMLContentWriter xmlContentWriter = new StudentsXMLContentWriter(writer);
             xmlContentWriter.writeStudentsData(xmlUrl);

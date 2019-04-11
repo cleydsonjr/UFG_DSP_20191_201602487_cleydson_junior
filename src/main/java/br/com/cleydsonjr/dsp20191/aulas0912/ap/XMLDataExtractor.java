@@ -16,7 +16,7 @@ import java.nio.file.Paths;
 public class XMLDataExtractor {
 
     public static void main(String[] args) {
-        final URL xmlUrl = StudentsXMLContentWriter.class.getResource("/students.xml");
+        final URL xmlUrl = StudentsXMLContentWriter.class.getResource("/aulas0912/students.xml");
         final Path outputFile = Paths.get("out/output.txt");
 
         try {

@@ -1,7 +1,9 @@
 package br.com.cleydsonjr.dsp20191.aulas1316.ap.persistencia.base;
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.util.Scanner;
 
 public class PersistenciaJdbc {
 
@@ -15,4 +17,9 @@ public class PersistenciaJdbc {
         stmt = connection.createStatement();
     }
 
+    protected String readSqlFile(String fileName) {
+        InputStream resourceAsStream = PersistenciaJdbc.class.getResourceAsStream(fileName);
+        Scanner scanner = new Scanner(resourceAsStream, "UTF-8");
+        return scanner.useDelimiter("\\A").next();
+    }
 }
